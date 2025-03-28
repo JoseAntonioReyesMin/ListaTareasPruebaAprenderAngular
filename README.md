@@ -20,7 +20,7 @@ Navigate to the project folder where the `db.json` file (which acts as the datab
 json-server --watch db.json --port 3000
 ```
 
-This will start the server at http://localhost:3000/, and you can access the database through that URL. The `db.json` file contains the initial data, and the server will automatically reload whenever this file is modified.
+This will start the server at `http://localhost:3000/`, and you can access the database through that URL. The `db.json` file contains the initial data, and the server will automatically reload whenever this file is modified.
 
 **Note**: If port 3000 is already in use, you can specify another port with `--port <port_number>`.
 
