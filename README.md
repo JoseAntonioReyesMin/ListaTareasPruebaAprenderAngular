@@ -2,7 +2,17 @@
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.5.
 
-# Start the server
+# Start the JSON Server
+To start using `json-server` and simulate a local database:
+
+**1. Install the JSON server**:
+
+If you don't have `json-server` installed yet, run the following command in your terminal:
+
+```bash
+npm install -g json-server
+```
+**2. Start the server**:
 
 Navigate to the project folder where the `db.json` file (which acts as the database) is located and run:
 
