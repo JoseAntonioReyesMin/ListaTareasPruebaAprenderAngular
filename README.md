@@ -2,13 +2,31 @@
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.5.
 
-## Json server
+# Start the server
 
-To start a local json server, run:
+Navigate to the project folder where the `db.json` file (which acts as the database) is located and run:
 
 ```bash
-json-server --watch db.json
+json-server --watch db.json --port 3000
 ```
+
+This will start the server at http://localhost:3000/, and you can access the database through that URL. The `db.json` file contains the initial data, and the server will automatically reload whenever this file is modified.
+
+**Note**: If port 3000 is already in use, you can specify another port with `--port <port_number>`.
+
+**3. Accessing the API**:
+
+The server will be available at the following URL:
+
+http://localhost:3000/
+
+You can access task data through paths such as:
+
+http://localhost:3000/tasks to retrieve all tasks.
+
+http://localhost:3000/tasks/{id} to retrieve a specific task by its ID.
+
+http://localhost:3000/tasks/{id} to update or delete tasks.
 
 ## Development server
 
