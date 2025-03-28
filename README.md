@@ -2,41 +2,13 @@
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.5.
 
-# Iniciar el Servidor JSON
-Para comenzar a usar el `json-server` y simular una base de datos local:
+## Json server
 
-**1. Instalar json-server**:
-
-Si aún no tienes `json-server` instalado, ejecuta el siguiente comando en tu terminal:
+To start a local json server, run:
 
 ```bash
-npm install -g json-server
+json-server --watch db.json
 ```
-**2. Iniciar el servidor**:
-
-Navega a la carpeta del proyecto donde se encuentra el archivo `db.json` (que actúa como la base de datos) y ejecuta:
-
-```bash
-json-server --watch db.json --port 3000
-```
-
-Esto iniciará el servidor en http://localhost:3000/, y podrás acceder a la base de datos a través de esa URL. El archivo `db.json` contiene los datos iniciales y el servidor se recargará automáticamente cada vez que se modifique este archivo.
-
-**Nota**: Si el puerto 3000 ya está en uso, puedes especificar otro puerto con `--port <número_de_puerto>`.
-
-**3. Acceder a la API**:
-
-El servidor estará disponible en la siguiente URL:
-
-http://localhost:3000/
-
-Puedes acceder a los datos de tareas a través de rutas como:
-
-http://localhost:3000/tasks para obtener todas las tareas.
-
-http://localhost:3000/tasks/{id} para obtener una tarea específica por su id.
-
-http://localhost:3000/tasks/{id} para actualizar o eliminar tareas.
 
 ## Development server
 
