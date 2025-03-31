@@ -26,9 +26,9 @@
             <div class="p-2 shadow border">
               <div class="input-group row ps-3">
                 <div class="card col-md-10 border-0">{{ task.task_name }}</div>
-                <button class="btn btn-outline-primary col me-2" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="call(task)">e</button>
-                <button class="btn btn-outline-danger col me-2" (click)="deleteTask(task)">X</button>
-                <button class="btn btn-outline-success col" (click)="switchTaskStatus(task)">A</button>
+                <button class="btn btn-outline-primary col me-2" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="call(task)">Edit</button>
+                <button class="btn btn-outline-danger col me-2" (click)="deleteTask(task)">Delete</button>
+                <button class="btn btn-outline-success col" (click)="switchTaskStatus(task)">Done</button>
               </div>
             </div>
           </div>
@@ -51,8 +51,9 @@
             <div class="p-2 shadow border">
               <div class="input-group row ps-3">
                 <div class="card col-md-10 border-0">{{ task.task_name }}</div>
-                <button class="btn btn-outline-primary col me-2" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="call(task)">e</button>
-                <button class="btn btn-outline-warning col me-2" (click)="switchTaskStatus(task)">X</button>
+                <button class="btn btn-outline-primary col me-2" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="call(task)">Edit</button>
+
+                <button class="btn btn-outline-warning col me-2" (click)="switchTaskStatus(task)">Undo</button>
               </div>
             </div>
           </div>
