@@ -13,10 +13,10 @@
         <div class="shadow">
           <div class="input-group mb-3">
             <input type="text" class="form-control" placeholder="Enter tasks" name="task" [(ngModel)]="addTaskValue">
+            <app-date-picker (dateChanged)="onDateSelected($event)"></app-date-picker>
             <button class="btn btn-success" type="button" (click)="addTask()">+</button>
           </div>
         </div>
-
         <!--Lista Tareas sin hacer-->
         <h4 class="text-primary mt-4">Tasks :</h4>
 
@@ -25,7 +25,10 @@
           <div class="m-3">
             <div class="p-2 shadow border">
               <div class="input-group row ps-3">
-                <div class="card col-md-10 border-0">{{ task.task_name }}</div>
+                <div class="card col-md-10 border-0">
+                  {{ task.task_name }} <br>
+                  <small class="text-muted">{{ task.date }}</small>
+                </div>
                 <button class="btn btn-outline-primary col me-2" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="call(task)">Edit</button>
                 <button class="btn btn-outline-danger col me-2" (click)="deleteTask(task)">Delete</button>
                 <button class="btn btn-outline-success col" (click)="switchTaskStatus(task)">Done</button>
@@ -50,7 +53,10 @@
           <div class="m-3">
             <div class="p-2 shadow border">
               <div class="input-group row ps-3">
-                <div class="card col-md-10 border-0">{{ task.task_name }}</div>
+                <div class="card col-md-10 border-0">
+                  {{ task.task_name }} <br>
+                  <small class="text-muted">{{ task.date }}</small>
+                </div>
                 <button class="btn btn-outline-primary col me-2" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="call(task)">Edit</button>
 
                 <button class="btn btn-outline-warning col me-2" (click)="switchTaskStatus(task)">Undo</button>

@@ -2,11 +2,11 @@ import {Component, OnInit} from '@angular/core';
 import {CrudService} from '../../service/crud.service';
 import {Task} from '../../model/task';
 import {FormsModule} from '@angular/forms';
-import {NgForOf} from '@angular/common';
+import {DatePickerComponent} from '../date-picker/date-picker.component';
 
 @Component({
   selector: 'app-dashboard',
-  imports: [FormsModule, NgForOf],
+  imports: [FormsModule, DatePickerComponent],
   templateUrl: './dashboard.component.html',
   styleUrl: './dashboard.component.css'
 })
@@ -19,7 +19,7 @@ export class DashboardComponent implements OnInit {
   addTaskValue : string = '';
   editTaskValue : string = '';
 
-  constructor(private crudService: CrudService) {}
+  constructor(private readonly crudService: CrudService) {}
 
   ngOnInit(): void {
     this.editTaskValue = '';
@@ -101,5 +101,9 @@ export class DashboardComponent implements OnInit {
         alert("Failed to switch task status");
       }
     });
+  }
+
+  onDateSelected(date: string) {
+    this.taskObj.date = date;
   }
 }
